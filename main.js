@@ -9,13 +9,15 @@ const config = require('config')
 const connectDB = require('./config/db')
 // 链接mongdb数据库
 connectDB()
+
+// app.use(express.json())
 // 解析json, req.body获取
-app.use(express.json())
+app.use(bodyParser.json())
+
 
 // 配置路由
-app.get('/',function(req,res) {
-  res.send("hello world")
-})
+app.use('/', require('./routes/index'))
+app.use('/api/url', require('./routes/url'))
 // 监听服务
 const PORT = config.get('port')
 app.listen(PORT, () => {

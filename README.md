@@ -18,7 +18,7 @@
 - mongoose mongodb数据库操作中间件
 - body-parser 处理请求结果
 - config 读取配置恩建
-- shortid 处理链接
+- shortid 生成唯一code
 - valid-url url验证
 
 ## 开发工具
