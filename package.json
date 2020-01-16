@@ -1,0 +1,29 @@
+{
+  "name": "dlj-node-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangyufeng96/dlj-node-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangyufeng96/dlj-node-express/issues"
+  },
+  "homepage": "https://github.com/yangyufeng96/dlj-node-express#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.7",
+    "shortid": "^2.2.15",
+    "valid-url": "^1.0.9"
+  }
+}
