@@ -11,7 +11,10 @@ router.get('/:code', async (req,res) => {
 
   // 检测url是否存在
   if (url) {
-    res.redirect(url.longUrl)
+    // res.redirect(url.longUrl)
+    res.render('index.ejs', {
+      url: url.longUrl
+    })
   } else {
     res.status(400).json('Server Error')
   }
