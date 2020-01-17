@@ -20,6 +20,7 @@ app.use('/', require('./routes/index'))
 app.use('/api/url', require('./routes/url'))
 // 监听服务
 const PORT = config.get('port')
+const BaseURL = config.get('baseUrl')
 app.listen(PORT, () => {
-  console.log(`Server runing at http://www.yangyufeng.com:${PORT}`)
+  console.log(`Server runing at ${BaseURL}:${PORT}`)
 })

@@ -21,18 +21,18 @@ router.post('/shorten', async (req, res) => {
   const urlCode = shortid.generate()
 
   // 生成短链接
-  const shortUrl = config.get('baseUrl') + urlCode
-
+  const shortUrl = `${config.get('baseUrl')}:${config.get('port')}/${urlCode}`
   try {
     // 存入数据库
     // 检测长链接 longUrl 是否存在数据库
-    const oldurl = await UrlModel.findOne({
+    
+    let url = await UrlModel.findOne({
       longUrl
     })
     if (url) {
-      return res.json(oldurl)
+      return res.json(url)
     }
-    const url = new UrlModel({
+    url = new UrlModel({
       longUrl,
       shortUrl,
       urlCode
